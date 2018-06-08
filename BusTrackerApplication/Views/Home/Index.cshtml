@@ -1,0 +1,42 @@
+﻿@model Bus
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a href="@Url.Action("Get", "Home")" style="color:green; font-size:14pt;">View Data</a>
+    </div>
+    <div>
+        @using (Html.BeginForm("Index", "Home", new { id = Model.RowKey }, FormMethod.Post))
+        {
+            <fieldset>
+                <legend>Enter Bus Details</legend>
+                <ol>
+                    <li>
+                        <label>Name</label>
+                        <input type="text" name="Name" required="required" value="@Model.Name" />
+                    </li>
+                    <li>
+                        <label>Number</label>
+                        <input type="text" name="Number" value="@Model.Number" />
+                    </li>
+                    @*<li>
+                        <label>Department</label>
+                        <input type="text" name="Department" value="@Model.Department" />
+                    </li>*@
+                </ol>
+                <input type="submit" value="Submit" />
+            </fieldset>
+        }
+    </div>
+</body>
+</html>

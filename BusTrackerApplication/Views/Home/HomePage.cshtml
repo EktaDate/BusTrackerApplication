@@ -1,0 +1,22 @@
+﻿@model Bus
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div> 
+        <h2> Welcome to Bus Tracker Application</h2>
+
+        <img src="@Url.Content(@Model .ImagePath)" alt="Sample Image" width="900px" />
+        <br/><br/>       
+        <a href="@Url.Action("SignIn", "Account")" style="color:green; font-size:14pt;">Start Up</a>
+    </div>
+</body>
+</html>

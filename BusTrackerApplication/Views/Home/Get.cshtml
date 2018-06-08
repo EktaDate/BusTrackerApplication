@@ -1,0 +1,54 @@
+﻿@model List<Bus>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Get</title>
+    <style>
+        a {
+            color: blue;
+        }
+
+        td, th {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="@Url.Action("Index", "Home")" style="color:green; font-size:14pt;">Add New Data</a>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    @*<th>Email</th>
+                    <th>Status</th>*@
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Bus busObj in Model)
+                {
+                    <tr>
+                        <td>@busObj.PartitionKey</td>
+                        <td>@busObj.RowKey</td>                       
+                        <td>
+                            <span>@Html.ActionLink("Edit", "Index", "Home", new { id = busObj.RowKey }, new { })</span>
+                            <span>@Html.ActionLink("Delete", "Delete", "Home", new { id = busObj.RowKey }, new { })</span>
+                            <span>@Html.ActionLink("Location", "GetLocation", "Home", new { id = busObj.RowKey }, new { })</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
