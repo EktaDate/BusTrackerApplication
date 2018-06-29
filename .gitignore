@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BusTrackerApplication/obj/Debug/BusTrackerApplication.csproj.CoreCompileInputs.cache
+/BusTrackerApplication/obj/Debug/BusTrackerApplication.csprojAssemblyReference.cache
+/.vs/BusTrackerApplication/v15/Server/sqlite3/db.lock
+/.vs/BusTrackerApplication/v15/Server/sqlite3/storage.ide
+/.vs/BusTrackerApplication/v15/Server/sqlite3/storage.ide-shm
+/.vs/BusTrackerApplication/v15/Server/sqlite3/storage.ide-wal
+/.vs/BusTrackerApplication/v15/.suo
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/BusTrackingApp/v15/.suo

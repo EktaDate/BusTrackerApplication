@@ -43,7 +43,7 @@
                         <td>
                             <span>@Html.ActionLink("Edit", "Index", "Home", new { id = busObj.RowKey }, new { })</span>
                             <span>@Html.ActionLink("Delete", "Delete", "Home", new { id = busObj.RowKey }, new { })</span>
-                            <span>@Html.ActionLink("Location", "GetLocation", "Home", new { id = busObj.RowKey }, new { })</span>
+                            <span>@Html.ActionLink("Start Tracking", "ShowCurrentLocation", "Home", new { id = busObj.RowKey }, new { })</span>
                         </td>
                     </tr>
                 }

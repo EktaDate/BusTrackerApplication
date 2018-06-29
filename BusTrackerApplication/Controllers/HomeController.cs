@@ -28,7 +28,7 @@ namespace BusTrackerAplplication
             // new entry view
             return View(new Bus());
         }
-       
+
         [HttpPost]
         public ActionResult Index(string id, FormCollection formData)
         {
@@ -99,5 +99,9 @@ namespace BusTrackerAplplication
 
         }
 
+        public ActionResult ShowCurrentLocation()
+        {
+            return PartialView("ShowCurrentLocation");
+        }
     }
 }
