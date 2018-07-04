@@ -11,12 +11,20 @@
     <title>HomePage</title>
 </head>
 <body>
-    <div> 
-        <h2> Welcome to Bus Tracker Application</h2>
-
-        <img src="@Url.Content(@Model .ImagePath)" alt="Sample Image" width="900px" />
-        <br/><br/>       
-        <a href="@Url.Action("SignIn", "Account")" style="color:green; font-size:14pt;">Start Up</a>
+    <div>
+ <h2> Welcome to Bus Tracker Application</h2>
+        <img src="@Url.Content(@Model.ImagePath)" alt="Sample Image" width="900px" />
+        <br /><br />
+        @{
+            if (!Request.IsAuthenticated)
+            {
+                <a href="@Url.Action("SignIn", "Account")" style="color:green; font-size:14pt;">Start Up</a>
+            }
+            else
+            {
+                <a href="@Url.Action("Get", "Home")" style="color:green; font-size:14pt;">Service List</a>
+            }
+        }
     </div>
 </body>
 </html>
